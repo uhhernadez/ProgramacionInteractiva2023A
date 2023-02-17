@@ -1,0 +1,6 @@
+#N canvas 0 667 643 300 12;
+#X obj 87 79 print;
+#X msg 86 16 62 11 34 7;
+#X msg 87 48 numero \$1 \$2 \$3 \$4;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
