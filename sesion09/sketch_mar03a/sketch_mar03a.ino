@@ -2,6 +2,7 @@ int encendido = 0;
 
 void setup()
 {
+  Serial.begin(9600);
   pinMode(7, INPUT);
   pinMode(8, OUTPUT);
   pinMode(9, OUTPUT);
@@ -11,7 +12,9 @@ void setup()
 void loop()
 {
   int push = digitalRead(7);
-
+  int potenciometro = analogRead(A0);  // read the input pin
+  Serial.println(potenciometro);
+  
   if (push == HIGH) 
   {
     encendido = (encendido == LOW)? HIGH:LOW;
@@ -26,6 +29,7 @@ void loop()
     ApagaLeds();
   }
   
+  delay(200);
 }
 
 void PrendeLeds() 
